@@ -1,0 +1,94 @@
+// @import "./mixins/breakpoint";
+// @import "./mixins/stop-scroll";
+// @import "./mixins/visually-hidden";
+// @import "./mixins/burger";
+// @import "./mixins/font-face";
+@import "vars";
+@mixin titles {
+    font-size: 24px;
+    font-weight: 700;
+    color: $textDark;
+    letter-spacing: -0.6px;
+    cursor: pointer;
+}
+
+@mixin blocks-headers {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $textGray;
+    padding: 16px;
+    font-weight: 400;
+}
+
+
+@mixin show-more {
+   
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: $textDark;
+}
+
+
+@mixin show-more-before {
+    content: ''; 
+    display: inline-block; 
+    width: 24px; 
+    height: 10px; 
+    background-repeat: no-repeat; 
+    background-image: url(../img/icon-button-read-more.svg); 
+    background-size: auto 100%; 
+    background-position: center;
+}
+
+@mixin justify-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+@mixin hover {
+    opacity: 0.78;
+}
+
+@mixin main-menu-items {
+    background: $btnColor;
+    border: 0px solid; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    align-items: center; 
+    justify-content: center; 
+    display: flex; 
+    opacity: 1;
+}
+
+@mixin border-top {
+    border-top: 1px solid $aqua;
+}
+
+@mixin section-positions {
+    position: relative;
+    background: $thirdBg;
+    min-height: 154px;
+}
+
+@mixin none {
+    display: none;
+}
+
+@mixin show-btn-link {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      // color: $text_dark;
+}
+
+@mixin opacity-elements {
+    opacity: 0.78;
+    transition: 0.5s;
+}

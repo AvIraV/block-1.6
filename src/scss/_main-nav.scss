@@ -1,0 +1,217 @@
+@import "vars";
+.block-services {
+    display: block;
+    position: relative;
+    margin: 0 auto ;
+  }
+  .header-main {
+    @include justify-elements;
+          &__burger {
+        margin-left: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        cursor: pointer;
+        @include main-menu-items;
+        &:hover,
+        &:focus {
+          @include opacity-elements;
+        }
+          }
+  
+          &__logo {
+        position: relative;
+        margin: 24px auto 24px 16px;
+        cursor: pointer;
+        &:after {
+          content: ""; 
+          display: block;
+          position: absolute;
+          width: 2px; 
+          height: 32px; 
+          top: 10px;
+          right: -12px;
+          background-color: $bgColor;
+        }
+          }
+  
+          &__menu {
+        display: flex;
+          }
+  
+          &__menu-nav {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+          }
+  
+          &__menu-viewtabs {
+        display: none;
+          }
+  
+          &__menu-item {
+        display: flex; 
+        align-items: center; 
+        flex-direction: row-reverse;
+        margin-left: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 24px;
+        }
+          }
+  
+          &__menu-item--svg {
+        @include main-menu-items;
+        &:hover,
+        &:active {
+          opacity: 0.78;
+        }
+          }
+  
+          &__menu-destkop {
+        border-left: 0px solid;
+          }
+  
+          &__menu-item--title {
+        margin-right: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $textDark;
+          }
+  }
+
+  @media (max-width: 767px) {
+    .header-main__menu-viewtabs {
+        @include none;
+    }
+  
+    .header-main__menu-item--title {
+        @include none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+  
+    .menu__navigation {
+        margin-bottom: 265px;
+    }
+  
+    .header-main {
+        &__menu-viewtabs {
+            display: flex; 
+            align-items: center;
+        }
+  
+        &__logo {
+            display: block;
+            &::before {
+                content: ""; 
+                display: inline-block;
+                width: 2px; 
+                height: 32px; 
+                // background: $items_bg;
+                margin-right: 15px;
+                margin-bottom: 8px;
+            }
+  
+            &::after {
+                display: none;
+            }
+        }
+  
+        &__menu-destkop::before {
+            content: ""; 
+            display: block;
+            width: 2px; 
+            height: 32px; 
+            // background: $items_bg;
+            margin-left: 5px;
+            }
+  
+        &__burger {
+            display: block;
+        }
+  
+        &__menu-item--title {
+            display: none;
+          }
+    }
+    
+    .services {
+        &__wrapper {
+            flex-direction: row;
+        }
+  
+        &__wrapper-info-img {
+            width: 50%;
+      
+            img {
+              margin-top: 41px;
+              padding-bottom: 0;
+              margin-bottom: 24px;
+            }
+          }
+    }
+}
+
+@media (max-width: 1439px) {
+  .header-main__menu-item--title {
+      display: none;
+  }
+}
+    
+@media (min-width: 1440px) {
+  .block-services {
+      margin-left: 320px;
+  }
+
+  .header-main {
+    position: absolute; 
+    right: 0; 
+    top: 0;
+
+    &__menu-destkop {
+        border-left: 0px solid;
+    }
+
+    &__menu-item--title {
+        display: block;
+    }
+
+    &__menu-item {
+        padding-top: 17px;
+    }
+
+    &__burger,
+    &__logo,
+    &__menu-destkop:before {
+        display: none;
+    }
+    
+    &__menu-viewtabs {
+        display: none;
+    }
+}
+
+.services {
+    border-top: none;
+
+    &__h1 {
+        display: inline-block;
+        padding-top: 23px;
+    }
+
+    &__menu {
+        padding-top: 8px;
+      }
+
+    &__menu__list  {
+        overflow-x: hidden;
+      }
+}
+
+} 

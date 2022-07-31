@@ -1,0 +1,103 @@
+@import "vars";
+
+.footer {
+    background: $mainBg;
+    @include border-top;
+          &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        min-height: 148px;
+          }
+  
+      &__info__item {
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: $textGray;
+        mix-blend-mode: normal;
+        opacity: 0.72;
+  
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+  }
+
+  @media (min-width: 768px) {
+
+    .footer {
+      &__info {
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 24px;
+          align-items: baseline;
+          margin-top: 32px;
+      }
+  
+      &__info__item {
+          width: 220px;
+          text-align: left;
+  
+          &:last-child {
+              text-align: right;
+              margin-right: 24px;
+          }
+        }
+    }
+}
+
+// .footer {
+//   background-color: $background;
+
+//   &--box {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     padding: 57px 4px 3px 4px;
+
+//     @media (min-width: 768px) {
+//       flex-direction: row;
+//       justify-content: space-between;
+//       padding: 80px 24px 25px 24px;
+//     }
+
+//     @media (min-width: 1440px) {
+//       padding: 83px 31px 21px 31px;
+//     }
+//   }
+
+//   &__text {
+//     text-align: center;
+//     font-size: 14px;
+//     line-height: 16px;
+//     color: $text-grey-color;
+//     margin-bottom: 16px;
+
+//     @media (min-width: 768px) {
+//       width: 218px;
+//       margin-bottom: 0;
+//     }
+//   }
+
+//   &__text:first-child {
+//     @media (min-width: 768px) {
+//       text-align: left;
+//     }
+//   }
+
+//   &__text:last-child {
+//     @media (min-width: 768px) {
+//       text-align: right;
+//     }
+
+//     @media (min-width: 1440px) {
+//       width: 330px;
+//     }
+//   }
+
+// }

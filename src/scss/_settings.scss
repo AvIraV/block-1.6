@@ -1,0 +1,81 @@
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  // min-width: 320px;
+  // overflow-anchor: none;
+  // margin: 0;
+  font-family: 'TTLakes', sans-serif;
+  background-color: $text;
+  // scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+button {margin: 0;
+ box-shadow: none; 
+ border: 0px solid; 
+ background: none;
+ cursor: pointer;
+}  
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: $secondBg;
+  margin: 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+ 
+  // .services,
+  .brands__section,
+  .brands__header,
+  .device-repair__section,
+  .device-repair__header,
+  .footer {
+      margin-left: 320px;
+  }
+
+  .price__header,
+  .price__section {
+      margin-left: 320px;
+  }
+
+ .services,
+  .block-services,
+  .brands__section,
+  .brands__header,
+  .device-repair__section,
+  .device-repair__header,
+  .price__header,
+  .price__section,
+  .footer {
+      width: 100%;
+  }
+} 

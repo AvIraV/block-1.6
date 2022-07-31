@@ -1,0 +1,177 @@
+@import "vars";
+
+/* Модальные окна */
+  
+  @media (max-width: 767px) {
+    .popap__body {
+      /* position: relative; */
+       /* display: none; */
+       position: fixed;
+       top: 0;
+       left: 0;
+    }
+  }
+.popap {
+  
+    &__callback {
+    display: none;
+        }
+
+    &__body {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 320px;
+        height: 676px;
+        background: $secondBg;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+
+    &__content {
+        position: relative;
+        display: block;
+        padding-left: 16px;
+    }
+
+    &__title {
+        position: relative;
+        display: block;
+        margin-top: 104px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+        color: $textDark;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -16px;
+        top: -5px;
+        border-radius: 3px;
+        width: 4px;
+        height: 40px;
+        background: $aqua;
+    }
+    }
+
+    &__inputbox {
+        width: 288px;
+        height: 48px;
+        border: 1px solid $bgColor;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        padding-left: 16px;
+        color: $textLight;
+        }
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        color: $textGray;
+
+    span {
+        color: $btnColor;
+        }
+    }
+
+    &__btn {
+        text-align: left;
+        padding-left: 17px;
+        margin-left: 146px;
+        width: 136px;
+        height: 32px;
+        border: 1px solid transparent;
+        background: $btnColor;
+        background-image: url('../img/icon-btn-dropdown.svg'); 
+        background-repeat: no-repeat;
+        background-position: 87% center;
+
+        border-radius: 16px;  
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: $secondBg;
+        opacity: 1;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+            @include opacity-elements;
+        }
+    }
+
+    &__close {
+    position: absolute;
+    top: -70px;
+    }
+
+    &__feedback {
+        display: none;
+    }
+
+    &__item {
+        margin-bottom: 16px;
+    }
+
+    &__inputbox-txtarea {
+        height: 118px;
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .popap__body {
+       position: fixed;
+       top: 0;
+       left: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+  .popap {
+    width: 520px;
+  
+    &__body {
+        width: 440px;
+        height: 940px;
+    }
+  
+    &__content {
+        padding-left: 32px;
+    }
+  
+    &__title {
+        margin-top: 40px;
+  
+        &::before {
+            left: -32px;
+            top: -5px;
+        }
+    }
+  
+    &__inputbox {
+        width: 376px;
+    }
+  
+    &__text {
+        padding-bottom: 14px;
+    }
+  
+    &__call__btn {
+        margin-left: 242px;
+    }
+  
+    &__close {
+        top: -4px;
+        left: -66px
+      }
+  }
+  
+  }

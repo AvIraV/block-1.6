@@ -1,0 +1,60 @@
+
+.image-slider .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    background: $gainsboro;
+    border-radius: 50%; 
+    margin: 0 6px; 
+    }
+    
+   
+    .swiper-wrapper {
+    // min-width: 0;
+        &__list {
+        }
+    }
+
+    .swiper-slide {
+    // width: 100;
+    // height: auto;
+    // min-width: auto;
+    }
+
+    .swiper-pagination {
+    display: flex; 
+    justify-content: center; 
+    padding-bottom: 27px;
+    }
+
+    .device-repair__section-container  .swiper-pagination {
+        // padding-bottom: 10px;
+        padding-top: 16px;
+      }
+
+    .price__section-container .swiper-pagination {
+        // padding-bottom: 220px;
+        padding-top: 16px;
+    }
+
+    
+// .swiper {
+// //   &-container {
+//     position: relative;
+//   }
+//   &-pagination {
+//     position: absolute;
+//     top: 104px;
+//     left: 58px;
+
+//     &-bullet {
+//       width: 12px;
+//       height: 12px;
+//       background-color: #7E7E82;
+//     }
+
+//     &-bullet:not(:last-child) {
+//       margin-right: 12px;
+//     }
+//   }
+// }

@@ -1,0 +1,137 @@
+@import "vars";
+
+.device {
+}
+.device-repair {
+
+    &__header {
+      @include border-top;
+      h2 {
+        @include blocks-headers;
+      }
+    }
+
+    &__section {
+    }
+    
+    &__section__item {
+      position: relative;
+      min-width: 240px;
+      height: 160px;
+      border: 1px solid $bgColor;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: $secondBg url('../img/icon-arrow-go.svg') no-repeat 94% 86%;
+      cursor: pointer;
+      margin-top: 16px;
+      &:hover,
+      &:focus {
+        @include opacity-elements;
+      }
+    }
+
+
+    &__section-container {
+        @include section-positions;
+        min-height: 228px;
+    }
+
+    &__section-wrapper {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        /*margin: 0;*/
+        padding: 0;
+        opacity: 1;
+        &:first-child {
+        margin-left: 16px;
+        }
+    }
+
+    &__section__link {
+        font-size: 16px;
+        font-weight: 400;
+        color: $textDark;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+        &__show-btn {
+          display: none;
+        }
+
+      //   &__show-btn-link {
+      //     display: none;
+      //   }
+}
+
+// .device-repair__section-container  .swiper-pagination {
+//   padding-bottom: 14px;
+// }
+@media (max-width: 767px) {
+  .device-repair__show-btn-link:before {
+      @include none;
+  }
+  
+  .device-repair__show-btn-link {
+      @include none;
+  }
+}
+
+@media (min-width: 768px) {
+  .device-repair {
+      &__section-wrapper {
+          display: flex;
+          flex-direction: row;
+          margin-top: 24px;
+          padding: 0;
+          flex-wrap: wrap;
+      }
+
+      &__section__item {
+          margin: 24px 0 20px 24px;
+          width: 224px;
+          height: 160px;
+          }
+
+      &__section__image {
+          margin: 0 0 16px 24px;
+          }
+
+      &__show-btn {
+          display: inline-block;
+          margin: 8px 0 34px 20px;
+          }
+  }
+  
+  .device-repair__section-wrapper:first-child {
+      margin-left: 0;
+  }
+
+  .device-repair__section__item:last-child {
+      margin-right: 0;
+  }
+
+  .device-repair__show-btn {
+      display: inline-block;
+      margin: 8px 0 34px 20px;
+  }
+
+  .device-repair__show-btn-link {
+    @include show-btn-link; 
+ }
+
+ .device-repair__show-btn-link:before {
+      @include show-more-before;
+ }
+}
+
+@media (min-width: 1120px) {
+    
+  .device-repair__section__image {
+      margin: 0 0 16px 32px;
+  }
+
+}
